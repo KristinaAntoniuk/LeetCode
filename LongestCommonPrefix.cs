@@ -1,28 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     internal class LongestCommonPrefix
     {
         public string LongestCommonPrefixMethod(string[] strs)
         {
-            if (strs.Length == 0) { return ""; }
 
-            int minLength = strs[0].Length;
+            int minLength = strs.OrderBy(x => x.Length).First().Length;
             string prefix = string.Empty;
-
-            foreach (string str in strs)
-            {
-                if (str.Length < minLength)
-                {
-                    minLength = str.Length;
-                }
-            }
-
 
             for (int i = 0; i < minLength; i++)
             {
