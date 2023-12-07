@@ -14,7 +14,7 @@
         {
             string s = "PAYPALISHIRING";
             int numRows = 3;
-            Assert.AreEqual("PAHNAPLSIIGYIR", zigzagConversion.Convert(s, numRows));
+            Assert.AreEqual("PAHNAPLSIIGYIR", zigzagConversion.ConvertI(s, numRows));
         }
 
         [TestMethod]
@@ -22,7 +22,7 @@
         {
             string s = "PAYPALISHIRING";
             int numRows = 4;
-            Assert.AreEqual("PINALSIGYAHRPI", zigzagConversion.Convert(s, numRows));
+            Assert.AreEqual("PINALSIGYAHRPI", zigzagConversion.ConvertII(s, numRows));
         }
     }
 }
